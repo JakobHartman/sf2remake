@@ -8,15 +8,12 @@ class StartUp:
         (width, height) = (1000, 1000)
         self.screen = display.set_mode((width, height))
         display.set_caption('Shining Force 2')
-        backgroundColor = (255, 255, 255)
-        self.screen.fill(backgroundColor)
         self.gameMenu = GameMenu(self)
         self.clock = pygame.time.Clock()
         self.clock.tick(60)
         self.mainLoop = True
 
     def startUp(self):
-
         while self.mainLoop:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

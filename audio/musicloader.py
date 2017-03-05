@@ -17,3 +17,7 @@ class MusicLoader:
             pygame.mixer.music.play(-1)
         else:
             pygame.mixer.music.play()
+
+    @staticmethod
+    def stop():
+        pygame.mixer.music.stop()

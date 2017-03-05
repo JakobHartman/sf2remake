@@ -16,6 +16,8 @@ class GameMenu:
         MusicLoader.loadMusic("menu/Battle2.mp3")
         MusicLoader.play(True)
 
+
+
     def run(self, parent):
         self.screen.fill((0, 0, 0))
         self.screen.blit(self.mainImage.image, self.mainImage.pos)
@@ -27,7 +29,7 @@ class GameMenu:
                 item.set_italic(False)
             else:
                 item.setFontSize(30)
-                item.set_italic(False)
+                item.set_italic(True)
 
             if item.isMouseClicked(mpos, pygame.mouse.get_pressed()):
                 item.setFontColor((255, 0, 0))
