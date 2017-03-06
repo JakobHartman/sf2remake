@@ -5,7 +5,7 @@ pygame.init()
 
 class MenuItem(pygame.font.Font):
     def __init__(self, text, font, font_size, font_color, posy, posx):
-        self.font = font;
+        self.font = font
         super().__init__(font, font_size)
         self.text = text
         self.font_size = font_size
@@ -33,8 +33,7 @@ class MenuItem(pygame.font.Font):
 
     def isMouseSelection(self, pos):
         x, y = pos
-        if (x >= self.posx and x <= self.posx + self.width) and \
-                (y >= self.posy and y <= self.posy + self.height):
+        if (x >= self.posx and x <= self.posx + self.width) and (y >= self.posy and y <= self.posy + self.height):
             return True
         return False
 

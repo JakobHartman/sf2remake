@@ -6,12 +6,10 @@ from audio.musicloader import MusicLoader
 
 class GameMenu:
     def __init__(self, parent):
-        self.screen = parent.screen
-        self.scrWidth = self.screen.get_rect().width
-        self.scrHeight = self.screen.get_rect().height
-        items = ('New Game', 'Continue', 'Options', 'Quit Game')
+        self.scrWidth = parent.screen.get_rect().width
+        self.scrHeight = parent.screen.get_rect().height
         self.items = []
-        self.createMenuItems(items)
+        self.createMenuItems(('New Game', 'Continue', 'Options', 'Quit Game'))
         self.mainImage = Image("menu/s2_Logo.png", (700, 400), (self.scrWidth / 6, 0))
         MusicLoader.loadMusic("menu/Battle2.mp3")
         MusicLoader.play(True)
@@ -19,8 +17,8 @@ class GameMenu:
 
 
     def run(self, parent):
-        self.screen.fill((0, 0, 0))
-        self.screen.blit(self.mainImage.image, self.mainImage.pos)
+        parent.screen.fill((0, 0, 0))
+        parent.screen.blit(self.mainImage.image, self.mainImage.pos)
 
         for item in self.items:
             mpos = pygame.mouse.get_pos()
@@ -37,7 +35,7 @@ class GameMenu:
                     parent.mainLoop = False
             else:
                 item.setFontColor((255, 255, 255))
-            self.screen.blit(item.label, item.position)
+            parent.screen.blit(item.label, item.position)
 
         pygame.display.flip()
 

@@ -6,9 +6,3 @@ class Monster(Unit):
         super().__init__(name, hp, at, df, ag, mv, weapon, spells, inventory)
         self.gold = gold
         self.specialMoves = specialMoves
-
-    def getGold(self):
-        return self.gold
-
-    def getSpecialMoves(self):
-        return self.specialMoves

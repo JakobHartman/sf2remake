@@ -9,14 +9,6 @@ class Character(Unit):
         self.promotions = promotions
         self.xp = 0
 
-    def getPromotions(self):
-        return self.promotions
-
-    def getLV(self):
-        return self.lv
-
-    def getClass(self):
-        return self.cClass
 
     def levelUp(self):
         self.lv += 1
@@ -26,6 +18,3 @@ class Character(Unit):
         self.xp += xp
         if xp > 100:
             self.levelUp()
-
-    def changeClass(self, newClass):
-        self.cClass = newClass

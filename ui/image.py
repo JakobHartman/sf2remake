@@ -14,3 +14,6 @@ class Image:
         self.x = x
         self.y = y
         self.pos = (self.x, self.y)
+
+
+
